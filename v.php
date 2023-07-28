@@ -5,16 +5,7 @@
 <?php include('tools/navbar.php'); ?>
 <!--  -->
 <?php
-$id = $_GET['vid'];
-$sql = "SELECT * FROM `videos` WHERE vid=$id"; 
-$result = mysqli_query($conn, $sql);
-$noResult = true;
-while($row = mysqli_fetch_assoc($result)){
-    $noResult = false;
-    $title = $row['tital'];
-    $desc = $row['ds']; 
-    $src = $row ['src'];
-    $date = $row ['date'];
+
  
 
 
@@ -23,10 +14,10 @@ while($row = mysqli_fetch_assoc($result)){
  echo' <section class="text-gray-600 body-font">
   <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
     
-    <iframe  width="560" height="315" class=" h-56 w-96  mb-10 object-cover object-center rounded"
-      src="https://www.youtube.com/embed/'.$src.'" title="YouTube video player" frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen></iframe></a>
+    // <iframe  width="560" height="315" class=" h-56 w-96  mb-10 object-cover object-center rounded"
+    //   src="https://www.youtube.com/embed/'.$src.'" title="YouTube video player" frameborder="0" 
+    //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    //   allowfullscreen></iframe></a>
     <div class="text-center lg:w-2/3 w-full">
       <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium dark:text-white text-gray-900">'.$title.'</h1>
       <p class="mb-8 leading-relaxed dark:text-slate-100">'.$desc.'</p>
@@ -41,4 +32,5 @@ while($row = mysqli_fetch_assoc($result)){
 <!--  --><h1 class="dark:text-white"></h1>
 <!-- footer -->
 <br>
-<?php include('tools/footer.php'); ?> 
+<h1>hi </h1>
+<!-- <?php include('tools/footer.php'); ?>  -->
